@@ -1,0 +1,43 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUserInput {
+  """The user email used to login"""
+  email: String!
+
+  """The full user name"""
+  name: String!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  removeUser(id: Int!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+}
+
+type Query {
+  findOne(id: Int!): User!
+  me: User!
+  user: [User!]!
+}
+
+input UpdateUserInput {
+  """The user email used to login"""
+  email: String
+  id: String!
+
+  """The full user name"""
+  name: String
+}
+
+type User {
+  """The user email used to login"""
+  email: String!
+
+  """User identifier"""
+  id: String!
+
+  """The full user name"""
+  name: String!
+}

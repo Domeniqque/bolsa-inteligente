@@ -44,6 +44,7 @@ module.exports = {
     'import/extensions': 'off',
     camelcase: 'off',
     '@typescript-eslint/camelcase': 'off',
+    'react/function-component-definition': 'off',
   },
   // settings: {
   //   'import/resolver': {

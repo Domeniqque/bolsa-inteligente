@@ -1,13 +1,14 @@
 {
-  "name": "@monorepo/root",
+  "name": "@bolsa/root",
   "author": "Domeniqque <domeniqque@hotmail.com>",
   "private": true,
   "scripts": {
     "postinstall": "expo-yarn-workspaces check-workspace-dependencies",
-    "web": "yarn workspace @monorepo/web",
-    "api": "yarn workspace @monorepo/api",
-    "mobile": "yarn workspace @monorepo/mobile",
-    "start": "concurrently 'yarn api start' 'yarn web start' 'yarn mobile start'"
+    "web": "yarn workspace @bolsa/web",
+    "api": "yarn workspace @bolsa/api",
+    "mobile": "yarn workspace @bolsa/mobile",
+    "start": "concurrently 'yarn api start' 'yarn web start' 'yarn mobile start'",
+    "install": "concurrently 'yarn api install' 'yarn web install' 'yarn mobile install'"
   },
   "workspaces": {
     "packages": [
