@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 import { join } from 'path';
 import { UserModule } from './user/user.module';
+import { PrismaService } from './common/prisma/prisma.service';
 
 @Module({
   imports: [
@@ -15,5 +16,6 @@ import { UserModule } from './user/user.module';
     }),
     UserModule,
   ],
+  providers: [PrismaService],
 })
 export class AppModule {}
